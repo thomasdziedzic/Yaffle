@@ -1,0 +1,16 @@
+data Nat : Type where
+  Z : Nat
+  S : Nat -> Nat
+
+data Maybe : a -> Type where
+  Nothing : Maybe a
+  Just : a -> Maybe a
+
+zero : Nat
+zero = Z
+
+one : Nat
+one = S zero
+
+infinity : Nat
+infinity = ?unknown

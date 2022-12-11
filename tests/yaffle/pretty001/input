@@ -1,0 +1,11 @@
+:t Nat
+:t Z
+:t S
+:t Maybe
+:t Nothing
+:t Just
+:t zero
+:t one
+:t infinity
+:t unknown
+:q

@@ -1,0 +1,13 @@
+Processing as TTImp
+Written "build/ttc/pretty.ttc"
+Yaffle> Main.Nat : %type
+Yaffle> Main.Z : Main.Nat
+Yaffle> Main.S : (%pi  Explicit Nothing Main.Nat Main.Nat)
+Yaffle> Main.Maybe : (%pi 0 Implicit (Just a) %type (%pi  Explicit Nothing a %type))
+Yaffle> Main.Nothing : (%pi 0 Implicit (Just {a:17}) %type (%pi 0 Implicit (Just a) {a:17} (Main.Maybe a)))
+Yaffle> Main.Just : (%pi 0 Implicit (Just a) %type (%pi  Explicit Nothing a (Main.Maybe a)))
+Yaffle> Main.zero : Main.Nat
+Yaffle> Main.one : Main.Nat
+Yaffle> Main.infinity : Main.Nat
+Yaffle> Main.unknown : Main.Nat
+Yaffle> Bye for now!
