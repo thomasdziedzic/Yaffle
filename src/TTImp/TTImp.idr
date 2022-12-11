@@ -337,6 +337,10 @@ Eq DataOpt where
   (==) NoNewtype NoNewtype = True
   (==) _ _ = False
 
+prependSpace : String -> String
+prependSpace "" = ""
+prependSpace str = " " ++ str
+
 -- TODO: Fix this, we need to be able to forward declare implementations
 mutual
   export
@@ -344,7 +348,7 @@ mutual
   Show nm => Show (RawImp' nm) where
       show (IVar fc n) = show n
       show (IPi fc c p n arg ret)
-         = "(%pi " ++ show c ++ " " ++ show p ++ " " ++
+         = "(%pi" ++ prependSpace (show c) ++ " " ++ show p ++ " " ++
            showPrec App n ++ " " ++ show arg ++ " " ++ show ret ++ ")"
       show (ILam fc c p n arg sc)
          = "(%lam " ++ show c ++ " " ++ show p ++ " " ++
